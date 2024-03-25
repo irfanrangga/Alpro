@@ -1,26 +1,28 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-func hitungLuasKelilingLingkaran(r float64, l,k *float64){
-	var pi = 3.14
-	*l = pi * r * r
-	*k = 2 * pi * r
+func hitungLuasKelilingLingkaran(r float64, l, k *float64) {
+	*l = math.Pi * math.Pow(r, 2)
+	*k = 2 * math.Pi * r
 }
-func hitungLuasKelilingPersegi(s float64, l,k *float64){
+func hitungLuasKelilingPersegi(s float64, l, k *float64) {
 	*l = s * s
 	*k = 4 * s
 }
-func hitungTotal(lL, lP, kL, kP float64, totLuas, totKel *float64){
+func hitungTotal(lL, lP, kL, kP float64, totLuas, totKel *float64) {
 	*totLuas = lL + lP
 	*totKel = kL + kP
 }
-func main(){
+func main() {
 	var r, s, luasL, luasP, kelL, kelP float64
 	var totalLuas, totalKel float64
-	
+
 	fmt.Scan(&r, &s)
-	for r != 0 && s != 0{
+	for r != 0 && s != 0 {
 		hitungLuasKelilingLingkaran(r, &luasL, &kelL)
 		hitungLuasKelilingPersegi(s, &luasP, &kelP)
 		hitungTotal(luasL, luasP, kelL, kelP, &totalLuas, &totalKel)
