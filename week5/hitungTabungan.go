@@ -10,10 +10,11 @@ func main() {
 
 func totalTabungan(x, y, z int) int {
 	var hari, jumlahTabungan, tabunganAwal int
+	tabunganAwal = x
 	for hari = 1; hari <= z; hari++ {
 		if hari%2 == 0 || hari%3 == 0 {
-			tabunganAwal = x
-			jumlahTabungan = tabunganAwal + y
+			jumlahTabungan += tabunganAwal
+			tabunganAwal += y
 		}
 	}
 	return jumlahTabungan
