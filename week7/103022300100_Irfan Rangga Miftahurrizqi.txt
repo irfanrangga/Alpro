@@ -1,0 +1,35 @@
+program data_mahasiswa
+
+kamus(global)
+    type Student <
+        name    : string
+        age     : integer
+        grade   : array [0..2] of integer 
+     >
+
+kamus(lokal)
+    student1 : Student
+
+algoritma
+
+    output("Masukkan nama mahasiswa")
+    input(student1.name)
+    output("Masukkan usia mahasiswa")
+    input(student1.age)
+    output("Masukkan nilai-nilai mahasiswa")
+
+    // Menginput nilai mahasiswa
+    for i <- 0 to 2 do 
+        input(student1.grade[i])
+    endfor
+
+    // Menampilkan data mahasiswa
+    output("Nama:", student1.name)
+    output("Usia:", student1.age)
+    for i <- 0 to 2 do
+        output(student1.grade[i])
+    endfor
+
+endprogram
+
+    

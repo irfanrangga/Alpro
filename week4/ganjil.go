@@ -7,7 +7,7 @@ func ganjil(n int)int{
 		return 1
 	}else if n%2!=0{
 		fmt.Print(n)
-		return ganjil(n-2)	
+		return ganjil(n-2)
 	}
 	return n
 }

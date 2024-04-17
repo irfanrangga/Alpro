@@ -33,7 +33,7 @@ func kelipatan6dan9(n int) {
 	}
 
 	*/
-	i++
+	
 	if i >= n {
 		fmt.Print(".")
 	} else {
