@@ -25,7 +25,7 @@ func hitungFibo(n,i int) int{
 	} else if n <= 2 {
 			return 1
 	} else {
-		fmt.Print(hitungFibo(n, i))
+		//fmt.Print(hitungFibo(n, i))
 		return hitungFibo(n-1, i) + hitungFibo(n-2, i)
 	}
 }

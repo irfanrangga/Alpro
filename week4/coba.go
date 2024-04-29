@@ -21,7 +21,7 @@ func faktorialRecursive(n int) int {
 }
 
 func faktorialTailReccurcion(n, i int) int {
-	if n <= 1 {
+	if n == 1 {
 		return i
 	}
 	return faktorialTailReccurcion(n-1, n*i)

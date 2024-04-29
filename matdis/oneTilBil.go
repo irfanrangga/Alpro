@@ -3,23 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	var bil, hasil int
-	counter(bil, &hasil)
-	fmt.Println("jumlah bilangan:", hasil)
-}
-
-func counter(n int, total *int){
-	*total = 0
-	for n = 1; n <= 100; n++ {
-		switch  {
-		case n%6 == 0:
-			*total++
-		case n%9 == 0:
-			*total++
-		case n%15 == 0:
-			*total++
-		case n%20 == 0:
-			*total++
+	var nilai int = 0
+	for i := 1; i < 1000000000000; i++ {
+		if i%6 == 0 || i%9 == 0 || i%15 == 0 || i%20 == 0 {
+			nilai += 1
 		}
 	}
+	fmt.Println(nilai)
 }
+

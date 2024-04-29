@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 const NMax int = 10
-//type tabInt [NMax] int
+type tim struct{
+	gol [NMAX] int
+}
 
 func main() {
 	var nilaiAkhir tabInt
@@ -12,13 +14,14 @@ func main() {
 	cetakNilai(nilaiAkhir, banyakNilai)
 }
 
-func bacaNilai(NA *tabInt, n *int){
+func bacaNilai(NA *tabInt, n *int, te *tim){
 	fmt.Scan(n)
 	if *n > NMax{
 		*n = NMax
 	}
 	for i:= 0; i < *n; i++ {
 		fmt.Scan(&NA[i])
+		fmt.Scan(&te.gol[i])
 	}
 }
 
